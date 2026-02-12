@@ -186,3 +186,9 @@ yline(1e-5,'r','linewidth',1.2);
 yline(-1e-5,'r','linewidth',1.2)
 xline(5*1.02,'g','linewidth',1.2);
 xline(5*0.98,'g','linewidth',1.2);
+
+%单位圆重根：qa = minpoly(A);roots(qa):单根稳定，重不稳
+%两个特征值1：As = sys(A);[V,J]=jordan(As),disp(J),如果jordan块右上角有1，则存在k和epilson(k)，但如果特征值小于1，则不发散
+%k_q = k(1); k_x = k(2:end);uk = -k_q*qk-k_x*xk
+2norm:out.x.data(:,1)
+Q = kron(eye(hp),Q)
